@@ -1,14 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import MovieDetail from './pages/MovieDetail';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <></>
-  )
+    <Router>
+      <div className="app">
+        <header className="header">
+          <div className="container">
+            <h1 className="logo">Movies</h1>
+            <nav>
+              <a href="/" className="nav-link">Home</a>
+            </nav>
+          </div>
+        </header>
+
+        <main className="main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/movie/:id" element={<MovieDetail />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
