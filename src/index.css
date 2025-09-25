@@ -1,0 +1,335 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.app {
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+}
+
+.nav-link {
+    color: #666;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+
+.main {
+    padding: 48px 0;
+}
+
+
+.page-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+.page-header p {
+    font-size: 20px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.movie-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    background: #fff;
+}
+
+.movie-card:hover {
+    border-color: #000;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+.movie-image {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+}
+
+.movie-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.movie-card:hover .movie-image img {
+    transform: scale(1.05);
+}
+
+.movie-info {
+    padding: 24px;
+}
+
+.movie-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.movie-year {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.movie-director {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.movie-genre {
+    display: inline-block;
+    background: #f5f5f5;
+    color: #666;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.back-link {
+    display: inline-block;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 32px;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #000;
+}
+
+.movie-hero {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 64px;
+    margin-bottom: 64px;
+}
+
+.movie-poster img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.movie-meta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.year,
+.genre,
+.rating {
+    background: #f5f5f5;
+    color: #666;
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.rating {
+    background: #000;
+    color: #fff;
+}
+
+.movie-info .movie-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+.director {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 32px;
+}
+
+.synopsis h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+.synopsis p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+}
+
+
+.reviews-section {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 64px;
+}
+
+.reviews-section h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    color: #000;
+}
+
+.reviews-list {
+    display: grid;
+    gap: 24px;
+}
+
+.review {
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 24px;
+    background: #fff;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.review-header h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.stars {
+    color: #fbbf24;
+    font-size: 16px;
+}
+
+.review p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+.error-message {
+    text-align: center;
+    padding: 64px 0;
+}
+
+.error-message h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+.error-message p {
+    font-size: 18px;
+    color: #666;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+    }
+
+    .page-header p {
+        font-size: 18px;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .movie-hero {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .movie-poster {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .movie-info .movie-title {
+        font-size: 32px;
+    }
+
+    .main {
+        padding: 32px 0;
+    }
+}
